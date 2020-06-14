@@ -1,3 +1,5 @@
-exports.myDateTime = function (){
+const myDateTime = function (){
 	return Date();
 };
+
+modules.exports=myDateTime;
