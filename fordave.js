@@ -1,16 +1,29 @@
   
 /*grabbed from w3 schools*/
-var https = require('https');
+var express = require('express');
 var dt = require('./myfirstmodule');
-const port = process.env.PORT || 3000;
-const address = process.argv[2];
+const path = require('path');
 
-https.createServer('',(req, res) => {
-	res.writeHead(200, {'Content-Type' : 'text/html'}),
-	res.write('<p>"The date and time are currently: " + dt.myDateTime()</p>'),
-    res.end()
-    console.log(res.write);
-})
-.listen(port, ()=>{
+const app = express();
+const port = process.env.PORT || 8080;
+
+const publicDirectory=path.join(__dirname, '../');
+const viewsPath = path.join(__dirname, '../views');
+
+app.set('view engine', 'hbs');
+app.set('views', viewsPath);
+app.engine('hbs', require('hbs').__express);
+
+
+app.use(express.static(publicDirectory));
+
+app.get('./',(req,res)=>{
+    res.render('date', {
+        date: myDateTime()
+    });
+});
+
+
+app.listen(port, ()=>{
     console.log('server is connected on port ' + port);
 });

@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/jDreisbach/for-dave/issues"
   },
-  "homepage": "https://github.com/jDreisbach/for-dave#readme"
+  "homepage": "https://github.com/jDreisbach/for-dave#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "hbs": "^4.1.1"
+  }
 }
