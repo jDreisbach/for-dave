@@ -1,0 +1,19 @@
+{
+  "name": "fordave",
+  "version": "1.0.0",
+  "description": "",
+  "main": "fordave.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jDreisbach/for-dave.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jDreisbach/for-dave/issues"
+  },
+  "homepage": "https://github.com/jDreisbach/for-dave#readme"
+}
