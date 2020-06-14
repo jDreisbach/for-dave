@@ -18,8 +18,8 @@ app.engine('hbs', require('hbs').__express);
 
 app.use(express.static(publicDirectory));
 
-app.get('./',(req,res)=>{
-    res.render('date', {
+app.get('/',(req,res)=>{
+    res.render('index', {
         date: dt.myDateTime
     });
 });
