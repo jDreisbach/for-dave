@@ -5,9 +5,9 @@ var dt = require('./myfirstmodule');
 const port = process.env.PORT || 3000;
 const address = process.argv[2];
 
-https.createServer ('',(req, res) => {
+https.createServer.get ('',(req, res) => {
 	res.writeHead(200, {'Content-Type' : 'text/html'}),
-	res.write("The date and time are currently: " + dt.myDateTime()),
+	res.write('<p>"The date and time are currently: " + dt.myDateTime()</p>'),
     res.end()
     console.log(res.write);
 })
