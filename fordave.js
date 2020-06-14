@@ -1,11 +1,16 @@
   
 /*grabbed from w3 schools*/
-var http = require('http');
+var https = require('https');
 var dt = require('./myfirstmodule');
+const port = process.env.PORT || 3000;
 
-http.createServer(function (req, res){
+https.createServer(function (req, res){
 	res.writeHead(200, {'Content-Type' : 'text/html'});
 	res.write("The date and time are currently: " + dt.myDateTime());
 	res.end();
 }).listen(1337);
 //hi dave
+
+app.listen(port, ()=>{
+    console.log('server is connected on port ' + port);
+});
