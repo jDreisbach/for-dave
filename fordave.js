@@ -8,7 +8,7 @@ const app = express();
 const port = process.env.PORT || 8080;
 
 const publicDirectory=path.join(__dirname, '../');
-const viewsPath = path.join(__dirname, '../views');
+const viewsPath = path.join(__dirname, '../templates/views');
 
 app.set('view engine', 'hbs');
 app.set('views', viewsPath);
